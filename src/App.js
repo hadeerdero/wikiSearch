@@ -1,12 +1,34 @@
 import logo from "./logo.svg";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback, use } from "react";
 import "./App.css";
 import axios from "axios";
 import usePrevState from "./hooks/usePrevState";
+import ViewCounter from "./components/ViewCounter"
+import ViewText from "./components/ViewText"
+
 
 function App() {
+  // const [count,setCount] = useState(0)
+  // const [age,setAge] = useState(1)
+  // const [user,setUser] = useState({name:"kareem"})
+  // const name = useMemo(()=>{
+  //   return user
+  // },[user])
+  // // const name = 'Kareem'
+  // const countHandler = ()=>{
+  //   setCount((prev)=>prev+1)
+  // }
+  // const ageHandler = useCallback(()=>{
+  //   console.log("age")
+  //   if(!user.age){
+  //     setUser((prev)=>{return {...prev,age:30}})
+
+  //   }else{
+
+  //   }return user 
+  // },[user])
   const [term, setTerm] = useState("javaScript");
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState([]); 
   const priviousTerm = usePrevState(term);
   const isInitialFetch = useRef(true);
   useEffect(() => {
@@ -43,7 +65,7 @@ function App() {
   const fetchResult = result.map((el, index) => {
     return (
       <tr key={el.pageid}>
-        <th scope="row">{index + 1}</th>
+        <th scope="row">{index + 1}</th> 
         <td>{el.title}</td>
         <td>{el.snippet}</td>
       </tr>
@@ -51,6 +73,10 @@ function App() {
   });
   return (
     <div className="App">
+      {/* <>
+      <ViewCounter num={count} increaseCount={countHandler}></ViewCounter>
+      <ViewText name={name} addAge={ageHandler} ></ViewText>
+      </> */}
       <div className="container">
         <div className="row">
           <div className="col">
