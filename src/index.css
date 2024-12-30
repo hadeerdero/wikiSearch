@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.list{
+  display: flex;
+  flex-direction: row;
+}
+.shapOne{
+  width: 300px;
+  height: 300px; 
+  border-radius: 50%;
+  border: 3px solid #554348;
+  background-color: #93b7be;
+  /* text-align: center;
+   */
+   margin: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.shapTwo{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 3px solid #554348;
+  background-color: #93b7be;
+  margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shapOne ul {
+  list-style: none;
+  padding-left: 0; /* Optional: to remove the left padding if needed */
+  text-align: center; /* Centers text horizontally */
+}
+.shapTwo ul {
+  list-style: none;
+  padding-left: 0; /* Optional: to remove the left padding if needed */
+  text-align: center; /* Centers text horizontally */
+}
+li {
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center;
+}
